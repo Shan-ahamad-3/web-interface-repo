@@ -11,67 +11,137 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
-    <style>
-        /* --- Global Styles & Variables --- */
-        :root {
-            --primary-color: #2C3E50;    /* Charcoal Grey */
-            --secondary-color: #FDF5E6;  /* Cream */
-            --accent-color: #CFB53B;     /* Old Gold */
-            --cta-color: #990011;         /* Deep Crimson */
-            --text-color: #333;
-            --light-text-color: #f4f4f4;
-            --heading-font: 'Playfair Display', serif;
-            --body-font: 'Lato', sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <header id="header">
+        <nav id="navbar">
+            <a href="#" class="logo">ZEESHAN</a>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#signatures">Our Menu</a></li>
+                <li><a href="#reservation">Reservations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#" class="btn btn-secondary">Order Online</a>
+        </nav>
+    </header>
 
-        html {
-            scroll-behavior: smooth;
-        }
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Experience the Magnificence of Authentic Cuisine</h1>
+            <p>A culinary journey where tradition meets modern elegance.</p>
+            <div>
+                <a href="#reservation" class="btn btn-primary">Reserve a Table</a>
+                <a href="#signatures" class="btn btn-outline">Explore Our Menu</a>
+            </div>
+        </div>
+    </section>
 
-        body {
-            font-family: var(--body-font);
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--secondary-color);
-        }
+    <section id="about" class="container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Restaurant Interior">
+            </div>
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>At Zeeshan, we believe that dining is more than just food; it's an experience. Born from a passion for authentic flavours and time-honoured recipes passed down through generations, our mission is to serve not just meals, but memories. Every dish is crafted with the finest ingredients and a deep respect for culinary heritage.</p>
+                <a href="#">Learn More About Us →</a>
+            </div>
+        </div>
+    </section>
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-            padding: 4rem 2rem;
-        }
+    <section id="signatures">
+        <div class="container">
+            <h2 class="section-title">A Taste of Our Signatures</h2>
+            <div class="signature-cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8da7?w=800&q=80" alt="Lamb Rogan Josh">
+                    <h3>Royal Lamb Rogan Josh</h3>
+                    <p>Tender lamb slow-cooked in a rich, aromatic gravy of spices and yogurt.</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80" alt="Shahi Dum Biryani">
+                    <h3>Shahi Dum Biryani</h3>
+                    <p>Fragrant basmati rice and succulent chicken, slow-cooked in a sealed pot to perfection.</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1625944022799-41603a748956?w=800&q=80" alt="Grand Kebab Platter">
+                    <h3>The Grand Kebab Platter</h3>
+                    <p>An assortment of our finest chicken, mutton, and vegetable kebabs grilled in the tandoor.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">View Full Menu</a>
+            </div>
+        </div>
+    </section>
 
-        h1, h2, h3 {
-            font-family: var(--heading-font);
-            color: var(--primary-color);
-        }
+    <section id="gallery" class="container">
+        <h2 class="section-title">Immerse Yourself in Elegance</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant dining hall">
+            <img src="https://images.unsplash.com/photo-1578423424048-a764d39f7041?w=800&q=80" alt="Elegant restaurant lighting">
+            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd354141?w=800&q=80" alt="Private dining area">
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=800&q=80" alt="Restaurant bar area">
+            <img src="https://images.unsplash.com/photo-1579027989536-b7b1f87565ab?w=800&q=80" alt="Guests dining happily">
+        </div>
+    </section>
 
-        h2.section-title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            font-size: 2.5rem;
-        }
+    <section id="reservation">
+        <div class="container text-center">
+            <h2>Book Your Table</h2>
+            <form class="reservation-form">
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+                <button type="submit" class="btn btn-primary">Find a Table</button>
+            </form>
+        </div>
+    </section>
 
-        .text-center {
-            text-align: center;
-        }
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="logo">ZEESHAN</h3>
+                <p>Authentic flavours, timeless traditions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Foodie Lane, Visakhapatnam, AP</p>
+                <p>+91 98765 43210</p>
+                <p>reservations@zeeshan.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <p>Lunch: 12:00 PM - 3:00 PM</p>
+                <p>Dinner: 7:00 PM - 11:00 PM</p>
+                <p>Monday Closed</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Zeeshan Restaurants. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-        /* --- Buttons & Links --- */
-        a {
-            text-decoration: none;
-            color: var(--cta-color);
-        }
+    <script src="script.js"></script>
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: 700
+</body>
+</html>
