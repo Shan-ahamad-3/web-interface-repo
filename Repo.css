@@ -1,0 +1,361 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #2C3E50;    /* Charcoal Grey */
+    --secondary-color: #FDF5E6;  /* Cream */
+    --accent-color: #CFB53B;     /* Old Gold */
+    --cta-color: #990011;         /* Deep Crimson */
+    --text-color: #333;
+    --light-text-color: #f4f4f4;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Buttons & Links --- */
+a {
+    text-decoration: none;
+    color: var(--cta-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cta-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #7c000e;
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #b9a032;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+#header {
+    background-color: rgba(44, 62, 80, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+#header.sticky {
+     background-color: rgba(44, 62, 80, 1);
+     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    max-width: 800px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+}
+
+/* --- About Section --- */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Signatures Section --- */
+#signatures {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+#signatures h2 {
+    color: var(--light-text-color);
+}
+
+.signature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: #fff;
+    color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+}
+
+.card p {
+    padding: 0 1.5rem 1.5rem;
+}
+
+/* --- Gallery Section --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Reservation Section --- */
+#reservation {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600&q=80') no-repeat center center/cover;
+    padding: 6rem 2rem;
+    color: #fff;
+}
+
+#reservation h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.reservation-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.reservation-form input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* --- Footer --- */
+#footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-col h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
+
+.footer-col p, .footer-col li {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+/* --- Responsive Design --- */
+@media(max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+    
+    #navbar .btn {
+        margin-top: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content, .signature-cards, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        margin-bottom: 2rem;
+    }
+    
+    .reservation-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reservation-form input, .reservation-form button {
+        width: 80%;
+    }
+}
