@@ -1,2 +1,3 @@
 # web-interface-repo
-a repo for web application
+This repo has web interface for ZEESHSAN resturant
+
